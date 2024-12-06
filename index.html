@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet', href={% static "style.css" %}></link>
+    <title> 
+        auth-page
+    </title>
+</head>
+<body>
+    <div class='glass_user'>
+        <pre id='rule'>
+        [*] This is Still Under development
+
+        [*] Make Sure to Log out...........
+
+        [*] Send Report to the Superaccount
+        </pre>
+        <br>
+        <form method='post'>
+        {% csrf_token %}
+        <input type='text' placeholder='Username'id='user', name="Username"> 
+        <br>
+        <input type='text' placeholder='Password'id='pass', name='password'>
+        <div id='Logins'>
+            <button id='Login_1', type='submit'>Login</button>
+        </div>
+    </form>
+    </div>
+</body>
+</html>

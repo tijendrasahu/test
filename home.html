@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet', href={% static "Home.css" %}></link>
+    <title>SYSTEM</title>
+</head>
+<body>
+   <div class='container'>
+    <h1>Infinty AI.</h1>
+    
+    <div class='instr'>
+        <pre>
+[*] This is A UnderDevelopment Project
+
+[*] Developed by team INFINITY AI
+
+[*] Prediction of Disease Based on symptomps.
+
+[*] Accurcy of Model is test:84%, train:86%
+
+[*] You will Get a list of More symptomps.  
+        </pre>
+    </div>
+    <div class='search'>
+        <form method='post'>
+            {% csrf_token %}
+            <input type='text' placeholder='     Tell us Your Symptomps.' name='user_inp'>
+            <button type='submit'>Go!</button>
+        </form>
+    </div>
+    <div class='ans', style="visibility:show;">
+        <p class='ans_1'>
+            {{data}}
+        </p>
+    </div>
+
+   </div>
+</body>
+</html>
